@@ -1,0 +1,14 @@
+<div>
+  <h1>{{ this.titulo }}</h1>
+  <button (click)="onConectarDesconectar($event)" value="Conectar">
+    Conectar
+  </button>
+  <div class = "button-leyenda">
+    <span>Corriente General:
+    {{ this.corrienteGeneral ? "Conectada" : "Desconectada" }}</span>
+  </div>
+  <button (click) = "onConectarDesconectarHab()">
+    Conectar-Habitacion
+  </button>
+</div>
+<app-habitacion></app-habitacion>

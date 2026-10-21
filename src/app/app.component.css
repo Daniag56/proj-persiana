@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+app-persiana {
+  flex: 1;
+}
+
+div {
+  flex: 0 0 30%;
+  background-color: yellow;
+}
+
+
+.button-leyenda {
+  display: flex;
+}
