@@ -1,1 +1,8 @@
-<p>habitacion works!</p>
+<div class="habitacion">
+  <h3>Habitación id.: #{{ idHab() }}</h3>
+  <p>Corriente: {{ hayCorriente ? 'ON' : 'OFF' }}</p>
+
+  <app-persiana
+    [corrienteHab]="corrienteHab()">
+  </app-persiana>
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-persiana',
@@ -7,7 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './persiana.component.css'
 })
 export class PersianaComponent {
-  tieneCorriente: boolean = false;
-  CambioEstado: string ="";
-  estado: string = "";
+
 }

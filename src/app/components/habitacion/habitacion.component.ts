@@ -1,4 +1,5 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
+
 
 @Component({
   selector: 'app-habitacion',
@@ -7,11 +8,11 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './habitacion.component.css'
 })
 export class HabitacionComponent {
-  corrienteHabitacion = input<false>
+  id = input<number>(1);
+  corrienteGeneral = input<boolean>(false);
+  corrienteHab = input<boolean>(false);
 
-  onConectarDesconectarHab(event:Event){
-    let conDesbutton = event.target as HTMLButtonElement
-
-    conDesbutton
+  get hayCorriente(): boolean {
+    return this.corrienteGeneral() && this.corrienteHab();
   }
 }

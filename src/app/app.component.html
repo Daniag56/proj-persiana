@@ -7,8 +7,13 @@
     <span>Corriente General:
     {{ this.corrienteGeneral ? "Conectada" : "Desconectada" }}</span>
   </div>
-  <button (click) = "onConectarDesconectarHab()">
-    Conectar-Habitacion
+  <button (click) = "onConectarDesconectarHab($event)" value="Conectar">
+    Conectar-Habitacion#1
   </button>
+  <div class = "button-leyenda">
+    <span>Estado recibido:
+      {{this.corrienteHab ? 'Persiana Abierta' : 'Persiana Cerrada'}}
+    </span>
+  </div>
 </div>
-<app-habitacion></app-habitacion>
+<app-habitacion [id]="1" [corrienteGeneral] = ""></app-habitacion>
