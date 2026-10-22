@@ -17,6 +17,7 @@ export class AppComponent {
   corrienteGeneral: boolean = false;
   corrienteHab: boolean = false;
   id = 1;
+  estado  = false;
   onConectarDesconectar(event: Event) {
     let conDesbutton = event.target as HTMLButtonElement;
 
@@ -31,5 +32,9 @@ export class AppComponent {
     this.corrienteHab = !this.corrienteHab;
 
     conDesbutton.innerText = this.corrienteHab ? 'Desconectar-Hab1' : 'Conectar-Hab1';
+  }
+
+  onCambioestado(abierta:boolean){
+    this.estado = abierta
   }
 }

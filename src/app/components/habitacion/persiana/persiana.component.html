@@ -1,1 +1,8 @@
-<p>persiana works!</p>
+<div>
+  <p>Persiana id:{{id()}} </p>
+  <p>Estado: {{abierta ? 'Abierta' : 'Cerrada'}}</p>
+
+  <button (click) = "onCambiarestado()"[disabled]="!puedeMoverse">
+    {{abierta ? 'Bajar' : 'Subir'}}
+  </button>
+</div>

@@ -1,8 +1,10 @@
 <div class="habitacion">
-  <h3>Habitación id.: #{{ idHab() }}</h3>
+  <h3>Habitación id.: #{{ id() }}</h3>
   <p>Corriente: {{ hayCorriente ? 'ON' : 'OFF' }}</p>
 
   <app-persiana
-    [corrienteHab]="corrienteHab()">
+    [corrienteGeneral]="corrienteGeneral()"
+    [corrienteHab]="corrienteHab()"
+    (estado)="estado.emit($event)">
   </app-persiana>
 </div>
